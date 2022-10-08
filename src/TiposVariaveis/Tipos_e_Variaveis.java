@@ -4,13 +4,13 @@ public class Tipos_e_Variaveis {
 
 	public static void main(String[] args) {
 		
-		int a,b;
-		String result ;
+		String a,b;
+		boolean result ;
 		
-		a = 5;
-		b= 7;
+		a = "Ola";
+		b = "Ola";
 		
-		result =  a != b? a+" e igual "+b : a+" Nao e igual "+b;  
+		result = (a.equals(b));  
 		System.out.println(result);
 
 	}
