@@ -15,8 +15,14 @@ public class main {
 		smartTv.aumentarVolume();
 		smartTv.aumentarVolume();
 		System.out.println("Volume? "+ smartTv.volume);
+		smartTv.diminuirVolume();
+		System.out.println("Volume? "+ smartTv.volume);
 		System.out.println("Canal? "+ smartTv.canal);
 		smartTv.mudarCanal(20);
+		System.out.println("Canal? "+ smartTv.canal);
+		smartTv.diminuirCanal();
+		System.out.println("Canal? "+ smartTv.canal);
+		smartTv.aumentarCanal();
 		System.out.println("Canal? "+ smartTv.canal);
 		
 
