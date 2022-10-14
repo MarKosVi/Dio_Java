@@ -1,5 +1,6 @@
 package Atividades;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class main {
@@ -7,14 +8,26 @@ public class main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		int nota;
+		int[] arr = new int[5];
+		int temp = 0;
+		int media = 0;
 		
-		System.out.println("Informe o valor da nota ");
-		nota = scan.nextInt();
-		while(nota < 0 || nota > 10) {
-			System.out.println("Valor "+nota+" Invalido, informe uma nota valida");
-			nota = scan.nextInt();
+		for(int i = 0; i<arr.length; i++) {
+			System.out.println("Informe o "+i+" valor");
+			arr[i] = scan.nextInt();
+			media += arr[i];
+			
+			if(i == 0) {
+				temp = arr[i];
+			}
+			
+			if(temp < arr[i]) {
+				temp = arr[i];
+			}
 		}
-		System.out.println("Nota: "+nota);
-	}
+		media /=arr.length;
+		
+		System.out.println(" maior nota e: "+temp+" e a media e: "+media);
+	}		
+		
 }
