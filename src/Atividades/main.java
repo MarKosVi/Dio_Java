@@ -20,19 +20,19 @@ public class main {
 		
 		
 		for(int i = 0; i<4; i++ ) {
-			System.out.print(matriz[0][i]);
+			System.out.print(matriz[0][i]+" ");
 		}
 		System.out.print("\n");
 		for(int i = 0; i<4; i++ ) {
-			System.out.print(matriz[1][i]);
+			System.out.print(matriz[1][i]+" ");
 		}
 		System.out.print("\n");
 		for(int i = 0; i<4; i++ ) {
-			System.out.print(matriz[2][i]);
+			System.out.print(matriz[2][i]+" ");
 		}
 		System.out.print("\n");
 		for(int i = 0; i<4; i++ ) {
-			System.out.print(matriz[3][i]);
+			System.out.print(matriz[3][i]+" ");
 		}
 		
 	}
