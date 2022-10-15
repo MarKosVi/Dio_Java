@@ -8,19 +8,21 @@ public class main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		int[] arr = new int[6];
+		String[] palavra = new String[6];
+		String[] vogais = {"a", "e", "i", "o", "u"};
+		int qtdConsoantes = 0;
 		
-		for(int i = 0; i<6; i++) {
-			System.out.println("Informe o "+(i+1)+" valor");
-			arr[i] = scan.nextInt();
+		for (int i = 0; i<palavra.length; i++) {
+			System.out.println("Informe o "+(i+1)+" numero");
+			palavra[i] = scan.next();	
+			
+			if (!(palavra[i].equalsIgnoreCase("a") || palavra[i].equalsIgnoreCase("e") || palavra[i].equalsIgnoreCase("i") 
+					|| palavra[i].equalsIgnoreCase("o") || palavra[i].equalsIgnoreCase("u"))) {
+				qtdConsoantes++;
+			}
+			
 		}
-		System.out.println("Os itens do array são: ");
-		for(int i = 0; i<arr.length; i++) {
-			System.out.print(" "+arr[i]);
-		}
-		System.out.println("\n Os itens do array invertidos: ");
-		for(int i = (arr.length - 1); i>=0; i--){
-			System.out.print(" "+arr[i]);
-		}
-	}		
+		
+		System.out.print(qtdConsoantes+" ");	
+	}
 }
