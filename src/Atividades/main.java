@@ -8,15 +8,19 @@ public class main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		int num, mult = 1;
+		int[] arr = new int[6];
 		
-		System.out.println("Calculo de fatorial \n");
-		num = scan.nextInt();
-		for(int i = num; i> 1; i--) {
-			mult *= i;
-			System.out.println(i+" x "+(i-1)+ " = "+mult );
+		for(int i = 0; i<6; i++) {
+			System.out.println("Informe o "+(i+1)+" valor");
+			arr[i] = scan.nextInt();
 		}
-		System.out.println("O valor do fatorial  de "+num+"! e "+mult );
-	
+		System.out.println("Os itens do array são: ");
+		for(int i = 0; i<arr.length; i++) {
+			System.out.print(" "+arr[i]);
+		}
+		System.out.println("\n Os itens do array invertidos: ");
+		for(int i = (arr.length - 1); i>=0; i--){
+			System.out.print(" "+arr[i]);
+		}
 	}		
 }
