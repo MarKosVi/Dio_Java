@@ -10,6 +10,7 @@ public class main {
 		
 		String[] palavra = new String[6];
 		String[] vogais = {"a", "e", "i", "o", "u"};
+		String[] consoantes = new String[6];
 		int qtdConsoantes = 0;
 		
 		for (int i = 0; i<palavra.length; i++) {
@@ -18,11 +19,17 @@ public class main {
 			
 			if (!(palavra[i].equalsIgnoreCase("a") || palavra[i].equalsIgnoreCase("e") || palavra[i].equalsIgnoreCase("i") 
 					|| palavra[i].equalsIgnoreCase("o") || palavra[i].equalsIgnoreCase("u"))) {
+				consoantes[i] = palavra[i];
 				qtdConsoantes++;
 			}
 			
 		}
 		
-		System.out.print(qtdConsoantes+" ");	
+		for (int i = 0; i<consoantes.length; i++) {
+			if(consoantes[i] != null) {
+				System.out.print(consoantes[i]+" ");
+			}
+		}
+		System.out.print(" totalizando: "+qtdConsoantes+" consoantes" );
 	}
 }
