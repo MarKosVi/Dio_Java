@@ -6,22 +6,21 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner number = new Scanner(System.in);
-
-        int num = number.nextInt();
-        System.out.println(FizzBuzz(num));
-        // TODO: Retorne a palavra correta de acordo com o múltiplo de "num". 
-        // Caso o valor não seja múltiplo de 3 ou 5, exiba o número, conforme o enunciado.
-
+Scanner leitor = new Scanner(System.in);
+        
+        int[] elementos = {64, 137, -16, 43, 67, 81, -90, 212, 10, 75}; 
+        
+        System.out.println(BuscaSequencial(leitor.nextInt(), elementos));
+        
+      
     }
     
-    
-    static String FizzBuzz(int n) {
-      if(n%3 == 0 && n%5 == 0) return "FizzBuzz";
-      if(n%3 == 0) return "Fizz";
-      if(n%5 == 0) return "Buzz";
-      
-      return ""+n;
-	    }
+    static String BuscaSequencial(int n, int[] arr) {
+      for(int i = 0; i<arr.length; i++){
+        if(arr[i] == n) 
+          return "Achei "+n+" na posicao "+i;
+      }
+      return "Numero "+n+" nao encontrado!";
+    }
 	
 }
