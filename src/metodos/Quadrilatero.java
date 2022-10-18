@@ -14,5 +14,8 @@ public class Quadrilatero {
 		return "Area do trapezio: "+(((baseMaior*baseMenor)*altura)/2);
 	}
 	
+	public static String Area(float diagonal1, float diagonal2) {
+		return "Area do Lozango: "+((diagonal1 * diagonal2)/2);
+	}
 	
 }
