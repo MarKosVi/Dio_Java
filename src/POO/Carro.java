@@ -2,14 +2,18 @@ package POO;
 
 public class Carro {
 	
-	String cor;
-	String modelo;
-	int capacidadeTanque;
+	private String cor;
+	private String modelo;
+	private int capacidadeTanque;
 	
 	public Carro(String cor, String modelo, int capacidadeTanque) {
 		this.cor = cor;
 		this.modelo = modelo;
 		this.capacidadeTanque = capacidadeTanque;
+	}
+	
+	public Carro() {
+		
 	}
 	
 	public double getCusto(double valor) {
