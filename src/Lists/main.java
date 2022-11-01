@@ -21,6 +21,10 @@ public class main {
 		System.out.println(gatos);
 		Collections.sort(gatos);
 		System.out.println(gatos);
+		Collections.sort(gatos, new ComparatorGatosIdade());
+		System.out.println(gatos);
+		Collections.sort(gatos, new ComparatorGatosCor());
+		System.out.println(gatos);
 		
 	}
 	
