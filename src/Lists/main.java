@@ -12,8 +12,8 @@ public class main {
 		ArrayList<Gato> gatos = new ArrayList<>();
 		
 		gatos.add(new Gato("John", 18, "Preto"));
-		gatos.add(new Gato("Simba", 6, "Tigrado"));
-		gatos.add(new Gato("John", 12, "Laranja"));
+		gatos.add(new Gato("Bob", 6, "Tigrado"));
+		gatos.add(new Gato("Ale", 12, "Laranja"));
 		
 		System.out.println(gatos);
 		
@@ -25,6 +25,7 @@ public class main {
 		System.out.println(gatos);
 		Collections.sort(gatos, new ComparatorGatosCor());
 		System.out.println(gatos);
+		Collections.sort(gatos, new ComparatorGatosNome());
 		
 	}
 	
