@@ -2,9 +2,12 @@ package Map;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class main {
 
@@ -17,6 +20,9 @@ public class main {
 			put("Hb20", 15.6);
 			put("Kwid", 14.4);
 		}};
+		
+		Map <String, Double> carrosPopulares1 = new LinkedHashMap<>(carrosPopulares);
+		Map <String, Double> carrosPopulares2 = new TreeMap<>(carrosPopulares);
 	
 	System.out.println(carrosPopulares);
 	//carrosPopulares.put("Gol", 15.2);
@@ -48,6 +54,27 @@ public class main {
 		}
 	}
 	
+	
+	Iterator <Double> it = carrosPopulares.values().iterator();
+	Double soma = 0d;
+	while(it.hasNext()) {
+		Double next = it.next();
+		soma += next;
+	}
+	System.out.println(soma);	
+	
+	System.out.println(carrosPopulares);
+	Iterator <Double> it1 = carrosPopulares.values().iterator();
+	while(it1.hasNext()) {
+		Double next = it1.next();
+		if(next == 15.6 )
+			it1.remove();
+	}
+	System.out.println(carrosPopulares);	
+	System.out.println(carrosPopulares1);
+	System.out.println(carrosPopulares2);
+	carrosPopulares1.clear();
+	System.out.println(carrosPopulares1.isEmpty());
 	
 	}
 }
