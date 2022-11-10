@@ -1,6 +1,6 @@
 package Set;
 
-public class Series {
+public class Series implements Comparable<Series>{
 	
 	private String nome;
 	private String genero;
@@ -36,6 +36,23 @@ public class Series {
 		this.tempoEpisodio = tempoEpisodio;
 	}
 	
+	@Override
+	public String toString() {
+		return "{"
+				+ " Nome: "+nome
+				+ " Genero: "+genero
+				+ " Tempo de duracao: "+tempoEpisodio
+				+ "}";
+	}
+	
+	
+	@Override
+	public int compareTo(Series s) {
+		if( this.getTempoEpisodio() == s.getTempoEpisodio() ) {
+			return this.getGenero().compareTo(s.getGenero());
+		}
+		return Integer.compare(this.getTempoEpisodio(), s.getTempoEpisodio());
+	}
 	
 
 }
