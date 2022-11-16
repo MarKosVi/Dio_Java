@@ -21,11 +21,7 @@ public class main {
 			put(6, 0);
 		}};
 		
-		for (int i = 1; i<=100; i++) {
-			int num = (int)Math.floor(Math.random()*(max-min+1)+min);
-			Collection<Integer> o = dados.values();
-			dados.put(num, o);
-		}
+	
 		
 
 	}
