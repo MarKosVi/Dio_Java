@@ -36,6 +36,14 @@ public class main_Stream_API {
 		List<Integer> numList = numerosAleatorios.stream().map(Integer::parseInt).collect(Collectors.toList());
 		numList.stream().forEach(System.out::println);
 		
+		List<Integer> pares = numList.stream().filter(i -> i%2 == 0 && i>2).collect(Collectors.toList());
+		System.out.println(pares);
+		
+		numerosAleatorios.stream().mapToInt(Integer::parseInt).average().ifPresent(System.out::println);
+		numList.removeIf(i -> (i%2 != 0));
+		System.out.println(numList);
+			
+		
 	}
 
 }
